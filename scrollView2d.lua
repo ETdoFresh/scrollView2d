@@ -59,6 +59,9 @@ function scrollView:new(params)
 				-- Remove focus so that touch events can happen elsewhere
 				display.getCurrentStage():setFocus( nil )
 				isFocus = false
+				
+				-- Hide Scrollbar
+				transition.to(scrollBar, {delay = 1, time = 400, alpha = 0})
 			end
 		end
 	end
